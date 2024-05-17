@@ -54,7 +54,7 @@ python3 /path/to/my/cifti_connectivity/cifti_conn_wrapper.py \
 --motion ${work_dir}/*.mat \
 --mre-dir ${MRE_DIR} \
 --additional-mask ${work_dir}/masks/sub-${SUB}_ses-${SES}_mask_groundtruth_${MAXMIN}min.txt \
---wb-command ${WB_CMD} --fd-threshold ${FD} \
+--wb-command ${WB_CMD} --fd-threshold ${FD} \ --remove-outliers \
 ${work_dir}/sub-${SUB}_ses-${SES}_task-${TASK}_bold_shuffled_timeseries.dtseries.nii \
 ${TR} ${work_dir}/groundtruth/ matrix;
 
@@ -67,7 +67,7 @@ do python3 /path/to/my/cifti_connectivity/cifti_conn_wrapper.py \
 --motion ${work_dir}/*.mat \
 --mre-dir ${MRE_DIR} \
 --additional-mask ${work_dir}/masks/sub-${SUB}_ses-${SES}_mask_half1_${MIN}min.txt \
---wb-command ${WB_CMD} --fd-threshold ${FD} \
+--wb-command ${WB_CMD} --fd-threshold ${FD} \ --remove-outliers \
 ${work_dir}/sub-${SUB}_ses-${SES}_task-${TASK}_bold_shuffled_timeseries.dtseries.nii \
 ${TR} ${work_dir}/half1/${MIN}min/ matrix;
 
